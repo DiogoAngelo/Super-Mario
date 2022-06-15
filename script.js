@@ -1,11 +1,14 @@
 const mario = document.querySelector(".mario");
 
-function marioJump() {
-  mario.classList.add("jump");
-
-  setInterval(() => {
+function marioJump(event) {
+  if (!mario.classList.contains("jump") && event.code === "Space") {
+    mario.classList.add("jump");
+  }
+  setTimeout(() => {
     mario.classList.remove("jump");
-  }, 5000);
+  }, 500);
 }
 
-window.addEventListener("keydown", marioJump);
+window.addEventListener("keydown", (event) => {
+  marioJump(event);
+});

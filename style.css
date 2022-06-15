@@ -14,20 +14,20 @@
 }
 
 .pipe {
-  width: 80px;
+  width: 70px;
   position: absolute;
-  bottom: 0;
-  animation: movePipe 3s linear infinite;
+  bottom: -20px;
+  animation: movePipe 2s linear infinite;
 }
 
 .mario {
-  width: 150px;
+  width: 100px;
   position: absolute;
   bottom: 0;
 }
 
 .jump {
-  animation: marioJump .5s;
+  animation: marioJump 500ms ease;
 }
 
 @keyframes movePipe {
@@ -41,7 +41,7 @@
 
 @keyframes marioJump {
   0% {
-    bottom: 180px;
+    bottom: 0;
   }
   40% {
     bottom: 180px;
@@ -53,6 +53,10 @@
 
   60% {
     bottom: 180px;
+  }
+
+  80% {
+    bottom: 90px;
   }
 
   100% {
